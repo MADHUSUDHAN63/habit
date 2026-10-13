@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --accent: #4f46e5;
+        --accent-dark: #3730a3;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 80px auto;
+        padding: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(79, 70, 229, 0.08);
+        padding: 40px 32px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 2.5rem;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .actions {
+        margin-top: 28px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-block;
+        text-decoration: none;
+        background: var(--accent);
+        color: white;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .button:hover {
+        background: var(--accent-dark);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+      }
+
+      .button.secondary:hover {
+        background: #eef2ff;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      .stat {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Build better habits.</h1>
+        <p>
+          Track your daily routines, stay consistent, and celebrate progress one step at a time.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="#">Get Started</a>
+          <a class="button secondary" href="#">View Progress</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>21</strong>
+            Day streak
+          </div>
+          <div class="stat">
+            <strong>7</strong>
+            Active habits
+          </div>
+          <div class="stat">
+            <strong>85%</strong>
+            Completion rate
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
